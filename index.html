@@ -34,6 +34,7 @@
             background-color: #f8f9fa;
             color: var(--text-dark);
             padding-bottom: 70px;
+            min-width: 320px;
         }
 
         header {
@@ -45,6 +46,7 @@
             top: 0;
             z-index: 1000;
             box-shadow: var(--card-shadow);
+            min-width: 320px;
         }
 
         .header-content {
@@ -196,6 +198,7 @@
             padding: 0.8rem 0;
             box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
+            min-width: 320px;
         }
 
         .nav-item {
@@ -276,7 +279,7 @@
             padding: 2rem;
             background: white;
             border-radius: 15px;
-            box-shadow: var(--card-shadow);
+            box-shadow: var (--card-shadow);
         }
 
         .about-header {
@@ -382,17 +385,6 @@
 
     .category-header {
         margin-bottom: 2rem;
-    }
-
-    .back-button {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        color: var(--primary-color);
-        text-decoration: none;
-        margin-bottom: 1rem;
-        cursor: pointer;
-        transition: var(--hover-transition);
     }
 
     .back-button:hover {
@@ -638,6 +630,30 @@
         opacity: 1;
     }
 }
+
+/* CSS for Back to Catalog button */
+.back-to-catalog {
+    position: fixed;
+    top: 80px; /* Adjust as needed */
+    left: 20px;
+    background: var(--secondary-color);
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-catalog:hover {
+    background: #c0392b;
+    transform: translateY(-3px);
+}
 </style>
 </head>
 <body>
@@ -719,15 +735,16 @@
 
     <!-- Nouvelle section Lumières -->
     <section id="lumieres" class="section">
-        <div class="category-header"><br><br>
-            <a onclick="showSection('catalogue')" class="back-button">
-                <i class="fas fa-arrow-left"></i> Retour
-            </a>
-            <h1 class="section-title">
-                <i class="fas fa-lightbulb"></i>
-                Nos Solutions d'Éclairage
-            </h1>
-        </div>
+    <div class="category-header">
+        <button id="backToCatalog" class="back-to-catalog" aria-label="Retour au catalogue" onclick="showSection('catalogue')">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <br><br>
+        <h1 class="section-title">
+            <i class="fas fa-lightbulb"></i>
+            Nos Solutions d'Éclairage
+        </h1>
+    </div>
         
         <div class="products-grid">
     <!-- Produits Lumière -->
@@ -808,9 +825,10 @@
 <!-- Nouvelle section Commandes -->
 <section id="commandes" class="section">
     <div class="category-header">
-        <a onclick="showSection('catalogue')" class="back-button">
-            <i class="fas fa-arrow-left"></i> Retour au catalogue
-        </a>
+        <button id="backToCatalog" class="back-to-catalog" aria-label="Retour au catalogue" onclick="showSection('catalogue')">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <br><br>
         <h1 class="section-title">
             <i class="fas fa-sliders-h"></i>
             Solutions de Commande
@@ -940,7 +958,8 @@
                 </div>
 
                 <div style="text-align: center;">
-                  Site web conçu par <a href="https://5s9horizons.github.io/">5s9 Horizons<br/><img src="5s9_logo.png" alt="Logo 5s9 Horizons" style="width: 10%; height: auto;"></a>
+                  Conçu par<br/>
+                  <a href="https://5s9horizons.github.io/">5s9 Horizons<br/></a>
                 </div>
             </div>
         </section>
