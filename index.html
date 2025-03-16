@@ -788,6 +788,14 @@
   });
 }
 
+if ('serviceWorker' in navigator && 'SyncManager' in window) {
+  navigator.serviceWorker.register('/service-worker.js').then(registration => {
+    window.addEventListener('online', () => {
+      registration.sync.register('send-notifications').catch(err => console.error(err));
+    });
+  });
+}
+
 function saveMessage(message) {
   return dbPromise.then(db => {
     const tx = db.transaction('notifications', 'readwrite');
