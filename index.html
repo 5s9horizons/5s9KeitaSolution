@@ -773,6 +773,28 @@
     document.getElementById('dismissButton').addEventListener('click', () => {
         document.getElementById('installBanner').classList.add('hidden');
     });
+
+    if ('serviceWorker' in navigator && 'SyncManager' in window) {
+  navigator.serviceWorker.register('/service-worker.js').then(registration => {
+    document.getElementById('sendNotificationButton').addEventListener('click', () => {
+      const message = document.getElementById('notificationMessage').value;
+      saveMessage(message).then(() => {
+        return registration.sync.register('send-notifications');
+      }).catch(err => console.error(err));
+    });
+    window.addEventListener('online', () => {
+      registration.sync.register('send-notifications').catch(err => console.error(err));
+    });
+  });
+}
+
+function saveMessage(message) {
+  return dbPromise.then(db => {
+    const tx = db.transaction('notifications', 'readwrite');
+    tx.objectStore('notifications').put({ message, sent: false });
+    return tx.complete;
+  });
+}
   </script>
 </head>
 <body>
@@ -1200,7 +1222,7 @@
         <button id="backToTop" class="back-to-top" aria-label="Retour en haut">
     <i class="fas fa-arrow-up"></i>
         </button>
-        
+
 </main>
 
     <nav class="main-nav">
