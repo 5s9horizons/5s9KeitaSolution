@@ -1,0 +1,21 @@
+{
+  "name": "Keita Solution",
+  "short_name": "Keita",
+  "description": "Keita Solution - Spécialiste en solutions énergétiques durables et équipements électriques au Sénégal",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2C3E50",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

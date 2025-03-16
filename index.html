@@ -7,9 +7,10 @@
     <meta name="keywords" content="énergie solaire, équipements électriques, solutions durables, Sénégal">
     <meta name="author" content="5s9 Horizons">
     <meta name="robots" content="index, follow">
-<link rel="icon" href="favicon.png" type="image/png">
+    <link rel="icon" href="favicon.png" type="image/png">
     <title>Keita Solution</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="manifest" href="/manifest.json">
     <style>
         /* ... (Garder les styles précédents) ... */
         :root {
@@ -655,6 +656,17 @@
     transform: translateY(-3px);
 }
 </style>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function(error) {
+          console.log('ServiceWorker registration failed: ', error);
+        });
+      });
+    }
+  </script>
 </head>
 <body>
     <!-- Ajoutez ceci au début du body -->
