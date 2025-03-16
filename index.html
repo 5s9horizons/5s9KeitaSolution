@@ -378,7 +378,7 @@
         }
 
         .social-links a:hover {
-            color: var(--secondary-color);
+            color: var (--secondary-color);
         }
         
     /* ... (styles précédents) ... */
@@ -726,9 +726,27 @@
             </div>
             <div class="category-card">
                 <i class="fas fa-sliders-h fa-3x"></i>
-                <h2>Commande</h2>
+                <h2>Commandes</h2>
                 <p>Solutions de contrôle électrique</p>
                 <a onclick="showSection('commandes')" class="view-button">Voir plus</a>
+            </div>
+            <div class="category-card">
+                <i class="fas fa-shield-alt fa-3x"></i>
+                <h2>Protections</h2>
+                <p>Découvrez notre gamme de protections</p>
+                <a onclick="showSection('protections')" class="view-button">Voir plus</a>
+            </div>
+            <div class="category-card">
+                <i class="fas fa-cable fa-3x"></i>
+                <h2>Câbles</h2>
+                <p>Découvrez notre gamme de câbles</p>
+                <a onclick="showSection('cables')" class="view-button">Voir plus</a>
+            </div>
+            <div class="category-card">
+                <i class="fas fa-tools fa-3x"></i>
+                <h2>Fixation Métallique</h2>
+                <p>Découvrez notre gamme de fixations métalliques</p>
+                <a onclick="showSection('fixation-metallique')" class="view-button">Voir plus</a>
             </div>
         </div>
     </section>
@@ -920,6 +938,84 @@
             </div>
     </section>
 
+<!-- Nouvelle section Protections -->
+<section id="protections" class="section">
+    <div class="category-header">
+        <button id="backToCatalog" class="back-to-catalog" aria-label="Retour au catalogue" onclick="showSection('catalogue')">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <br><br>
+        <h1 class="section-title">
+            <i class="fas fa-shield-alt"></i>
+            Protections
+        </h1>
+    </div>
+    <div class="products-grid">
+        <!-- Placeholder for 11 product cards -->
+        <article class="product-card">
+            <div class="product-image">
+                <img src="placeholder.jpg" alt="Produit 1">
+            </div>
+            <div class="product-details">
+                <h2 class="product-title">Produit 1</h2>
+            </div>
+        </article>
+        <!-- Repeat for 10 more product cards -->
+    </div>
+</section>
+
+<!-- Nouvelle section Câbles -->
+<section id="cables" class="section">
+    <div class="category-header">
+        <button id="backToCatalog" class="back-to-catalog" aria-label="Retour au catalogue" onclick="showSection('catalogue')">
+            <i class="fas fa-cable"></i>
+        </button>
+        <br><br>
+        <h1 class="section-title">
+            <i class="fas fa-cable"></i>
+            Câbles
+        </h1>
+    </div>
+    <div class="products-grid">
+        <!-- Placeholder for 7 product cards -->
+        <article class="product-card">
+            <div class="product-image">
+                <img src="placeholder.jpg" alt="Produit 1">
+            </div>
+            <div class="product-details">
+                <h2 class="product-title">Produit 1</h2>
+            </div>
+        </article>
+        <!-- Repeat for 6 more product cards -->
+    </div>
+</section>
+
+<!-- Nouvelle section Fixation Métallique -->
+<section id="fixation-metallique" class="section">
+    <div class="category-header">
+        <button id="backToCatalog" class="back-to-catalog" aria-label="Retour au catalogue" onclick="showSection('catalogue')">
+            <i class="fas fa-tools"></i>
+        </button>
+        <br><br>
+        <h1 class="section-title">
+            <i class="fas fa-tools"></i>
+            Fixation Métallique
+        </h1>
+    </div>
+    <div class="products-grid">
+        <!-- Placeholder for 3 product cards -->
+        <article class="product-card">
+            <div class="product-image">
+                <img src="placeholder.jpg" alt="Produit 1">
+            </div>
+            <div class="product-details">
+                <h2 class="product-title">Produit 1</h2>
+            </div>
+        </article>
+        <!-- Repeat for 2 more product cards -->
+    </div>
+</section>
+
     <!-- Section À propos (identique à la version précédente) -->
     <section id="compte" class="section">
             <h1 class="section-title"><br/>À Propos</h1>
@@ -929,7 +1025,7 @@
                         <img src="profil.jpg" alt="Photo de profil">
                     </div>
                     <h2>Keita Solution</h2>
-                    <p class="subtitle">Études, Installation, Maintenance</p>
+                    <p class="subtitle">Apprenant Qualisolaire Sénégal</p>
                 </div>
 
                 <div class="about-content">
