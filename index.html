@@ -731,6 +731,40 @@
 .dismiss-button:hover {
     background: rgba(255, 255, 255, 0.1);
 }
+
+/* Styles for About Section Buttons */
+.about-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 20px;
+}
+
+.about-buttons a {
+    text-decoration: none;
+}
+
+.about-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: var(--secondary-color);
+    color: white;
+    transition: var(--hover-transition);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.about-buttons button:hover {
+    background: #c0392b;
+}
+
+.about-buttons button i {
+    font-size: 1.2rem;
+}
 </style>
   <script>
     if ('serviceWorker' in navigator) {
